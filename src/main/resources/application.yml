@@ -1,0 +1,26 @@
+api:
+  name: order_management
+  version: v1
+server:
+  servlet:
+    context-path: /order_management/v1/
+  port: 8090
+springdoc:
+  api-docs:
+    path: /api-docs
+spring:
+  data:
+    mongo:
+      repositories:
+        enabled: true
+    mongodb:
+      uri: mongodb://localhost:27017/orders
+      database: orders
+app:
+  auth:
+    header: x-auth-token
+    token: 40d7339f-006d-4918-bdb0-1743f31b6da5
+  kafka:
+    topic_name: order-details
+    server: localhost:9092
+    compression-type: gzip

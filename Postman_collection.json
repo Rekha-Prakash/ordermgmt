@@ -1,0 +1,168 @@
+{
+	"info": {
+		"name": "OrderManagement",
+		"_postman_id": "8179d29f-4cef-cdcc-0339-2f2d98d00f55",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HealthCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/order_management/v1/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"order_management",
+						"v1",
+						"health"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllOrders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "40d7339f-006d-4918-bdb0-1743f31b6da5"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8090/order_management/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"order_management",
+						"v1",
+						"orders"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CreateOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "40d7339f-006d-4918-bdb0-1743f31b6da5"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customerName\": \"Rekha\",\n\t\"address\" : \"TamilNadu\",\n    \"contactNo\" : \"9876543210\",\n    \"orderStatus\" : \"PLACED\",\n    \"price\" : 1050.00\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/order_management/v1/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"order_management",
+						"v1",
+						"orders",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderByOrderId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "40d7339f-006d-4918-bdb0-1743f31b6da5"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customerName\": \"Rekha\",\n\t\"address\" : \"TamilNadu\",\n    \"contactNo\" : \"9876543210\",\n    \"orderStatus\" : \"PLACED\",\n    \"price\" : 1050.00\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/order_management/v1/orders/8d1f53b8-e2d5-4046-9153-704fc2f336ef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"order_management",
+						"v1",
+						"orders",
+						"8d1f53b8-e2d5-4046-9153-704fc2f336ef"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "OpenAPISpec",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "40d7339f-006d-4918-bdb0-1743f31b6da5"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customerName\": \"Rekha\",\n\t\"address\" : \"TamilNadu\",\n    \"contactNo\" : \"9876543210\",\n    \"orderStatus\" : \"PLACED\",\n    \"price\" : 1050.00\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/order_management/v1/api-docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"order_management",
+						"v1",
+						"api-docs"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
