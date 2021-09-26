@@ -2,6 +2,10 @@
 
 This application handles the order creation and other order related operations.
 
+## Architecture
+
+![](OrdermgmtArchitecture.png)
+
  ## Quickstart Guide
  ### Prerequisites
  #### Local Setup

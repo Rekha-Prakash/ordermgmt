@@ -17,6 +17,8 @@ spring:
       uri: mongodb://localhost:27017/orders
       database: orders
 app:
+  async:
+    thread_size: 100
   auth:
     header: x-auth-token
     token: 40d7339f-006d-4918-bdb0-1743f31b6da5
